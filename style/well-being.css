@@ -1,0 +1,51 @@
+body {
+    background-color: #F9BEC5;
+    color: #011627;
+    font-family: 'Short Stack', cursive;
+}
+
+h1 {
+    font-size: 2.25rem; /* 36px */
+}
+
+h2 {
+    font-size: 1.625rem; /* 26px */
+}
+
+h3, input[type=submit] {
+    font-size: 1.25rem; /* 18px */
+}
+
+p {
+    width: 31.25rem; /* 500px */
+    text-align: center;
+}
+
+h1, h2, h3, input[type=submit]{
+    color: #492D47;
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+label {
+    font-size: 1rem; /* 16px */
+}
+
+div {
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+.mindful {
+    margin-left: 1.625rem; /* 26px */
+}
+
+input[type=submit] {
+    padding: 0.625rem; /* 10px */
+    border-radius: 0.3125rem; /* 5px */
+    margin-top: 0.625rem;
+}
+
+input[type=number] {
+    width: 2.875rem; /* 46px */
+}
+

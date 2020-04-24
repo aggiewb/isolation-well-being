@@ -35,9 +35,17 @@ function restoreState(){
     if(!stringyState){
         return;
     }
+    var stringyDate = localStorage.date;
+    if(stringyDate){
+        var date = JSON.parse(stringyDate);
+        var nowDate = new Date();
+        if(nowDate.getDate() !== date.day || nowDate.getMonth() !== date.month || nowDate.getFullYear() !== date.year){
+            resetState();
+            return;
+        }
+    }
     var state = JSON.parse(stringyState);
     var keys = Object.keys(state);
-
     for(var i = 0; i < keys.length; i++){
         var key = keys[i];
         var element = document.getElementById(key);

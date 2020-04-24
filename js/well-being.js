@@ -19,11 +19,11 @@ function saveState(event){
     }
     localStorage.state = JSON.stringify(inputValues);
     var date = new Date();
-    localStorage.date = {
+    localStorage.date = JSON.stringify({
         day: date.getDate(),
         month: date.getMonth(),
         year: date.getFullYear()
-    };
+    });
 }
 
 var button = document.querySelector('input[type="submit"]');

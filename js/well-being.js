@@ -18,6 +18,12 @@ function saveState(event){
         inputValues[element.id] = value;
     }
     localStorage.state = JSON.stringify(inputValues);
+    var date = new Date();
+    localStorage.date = {
+        day: date.getDate(),
+        month: date.getMonth(),
+        year: date.getFullYear()
+    };
 }
 
 var button = document.querySelector('input[type="submit"]');

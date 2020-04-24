@@ -5,6 +5,10 @@ function saveState(event){
     var inputs = document.querySelectorAll("input");
     for(var i = 0; i < inputs.length; i++){
         var element = inputs[i];
+        var id = element.id;
+        if(!id){
+            continue;
+        }
         var type = element.type;
         var value;
         if(type === "checkbox"){

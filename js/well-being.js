@@ -45,3 +45,17 @@ function restoreState(){
 }
 
 restoreState();
+
+//Reset form state
+function resetState(){
+    var inputs = document.querySelectorAll("input[id]");
+    for(var i = 0; i < inputs.length; i++){
+        var element = inputs[i];
+        if(element.type === "checkbox"){
+            element.checked = false;
+        } else {
+            element.value = "";
+        }
+    }
+    delete localStorage.state;
+}

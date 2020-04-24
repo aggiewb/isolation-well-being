@@ -24,6 +24,8 @@ function saveState(event){
         month: date.getMonth(),
         year: date.getFullYear()
     });
+    var savedMessage = document.querySelector(".saved");
+    savedMessage.style.display = "block";
 }
 
 var button = document.querySelector('input[type="submit"]');

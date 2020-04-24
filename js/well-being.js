@@ -9,9 +9,8 @@ function saveState(event){
         if(!id){
             continue;
         }
-        var type = element.type;
         var value;
-        if(type === "checkbox"){
+        if(element.type === "checkbox"){
             value = element.checked;
         } else {
             value = element.value;
@@ -23,5 +22,3 @@ function saveState(event){
 
 var button = document.querySelector('input[type="submit"]');
 button.addEventListener("click", saveState);
-
-//Restore page state on load

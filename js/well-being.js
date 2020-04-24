@@ -19,3 +19,5 @@ function saveState(event){
 
 var button = document.querySelector('input[type="submit"]');
 button.addEventListener("click", saveState);
+
+//Restore page state on load

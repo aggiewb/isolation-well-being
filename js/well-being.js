@@ -22,3 +22,26 @@ function saveState(event){
 
 var button = document.querySelector('input[type="submit"]');
 button.addEventListener("click", saveState);
+
+//Restore page state on load
+function restoreState(){
+    var stringyState = localStorage.state;
+    if(!stringyState){
+        return;
+    }
+    var state = JSON.parse(stringyState);
+    var keys = Object.keys(state);
+
+    for(var i = 0; i < keys.length; i++){
+        var key = keys[i];
+        var element = document.getElementById(key);
+        var value = state[key];
+        if(element.type === "checkbox"){
+            element.checked = value;
+        } else {
+            element.value = value;
+        }
+    }
+}
+
+restoreState();

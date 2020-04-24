@@ -1,12 +1,20 @@
-var inputValues = {};
-var inputs = document.querySelectorAll("input");
-for(var i = 0; i < inputs.length; i++){
-    var type = inputs[i].type;
-    var value;
-    if(type === "checkbox"){
-        value = inputs[i].checked;
-    } else {
-        value = inputs[i].value;
+function saveState(event){
+    event.preventDefault();
+    var inputValues = {};
+    var inputs = document.querySelectorAll("input");
+    for(var i = 0; i < inputs.length; i++){
+        var element = inputs[i];
+        var type = element.type;
+        var value;
+        if(type === "checkbox"){
+            value = element.checked;
+        } else {
+            value = element.value;
+        }
+        inputValues[element.id] = value;
     }
-    inputValues[inputs[i].id] = value;
+    localStorage.state = JSON.stringify(inputValues);
 }
+
+var button = document.querySelector('input[type="submit"]');
+button.addEventListener("click", saveState);

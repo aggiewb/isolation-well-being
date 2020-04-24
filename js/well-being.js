@@ -1,3 +1,4 @@
+//Add a click listener that stores the current state of the page
 function saveState(event){
     event.preventDefault();
     var inputValues = {};
